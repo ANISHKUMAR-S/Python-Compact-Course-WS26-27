@@ -42,10 +42,14 @@ events = {
     }
 }
 
-print("Events in Dortmund on 19 September 2026:")
+night_date = "2026-09-19"
+
+print("\nEvents running during the Night of Museums in Dortmund on 19 September 2026:")
+
 for event, details in events.items():
-    print(f"\nEvent: {event}")
-    print(f"Date: {details['date']}")
-    print(f"Start Time: {details['start']}")
-    print(f"End Time: {details['end']}")
-    print(f"Location: {details['location']}")
+    if details["date"] == night_date:
+        print(f"\nEvent: {event}")
+        print(f"Date: {details['date']}")
+        print(f"Start Time: {details['start']}")
+        print(f"End Time: {details['end']}")
+        print(f"Location: {details['location']}")
